@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
 
 export default function Nback() {
-    const [num, setNum] = useState(2);
+    const [num, setNum] = useState(3);
     const [fin, setFin] = useState(false);
     const [realAnswerd, setRealAnswerd] = useState([]);
     const [myAnswerd, setMyAnswerd] = useState([]);
     const [answerd, setAnswerd] = useState([]);
-    const [time,setTime] = useState(1000);
+    const [time,setTime] = useState(1500);
     //const [count,setCount] = React.useState(0);
     //const [answer,setAnswer] = React.useState(0);
 
@@ -122,13 +122,11 @@ const setNumber = (e) =>{
                     <div id="box12" style={{position:'absolute', backgroundColor:'#307cc6', left:'75%',border:'2px solid #307cc6', width:"20%", height:"100%"}}></div>
                 </div>
             </div>
-
             <div style={{position:"absolute", bottom:"20%", width:"85%",fontSize:"20px"}}>흰색
             {fin != false && answerd.map((test1,index)=>
                 (<div style={{position:"absolute", bottom:"20%",left:`${10+index*5}%`, fontSize:"20px"}}>{test1}</div>)
             )}
             </div>
-            
             <div style={{position:"absolute", bottom:"15%", width:"85%",fontSize:"20px"}}>정답
             {fin != false && num == 2 && realAnswerd.map((test1,index)=>
                 (<div style={{position:"absolute", bottom:"20%",left:`${20+index*5}%`, fontSize:"10px"}}>{test1}</div>)
